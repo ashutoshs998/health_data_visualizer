@@ -1,5 +1,11 @@
 # health_data_visualizer
 
+## start: 
+
+npm install 
+
+npm start
+
 ## 1. get all county list ---
 
 #### route:
