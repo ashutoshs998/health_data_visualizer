@@ -4,7 +4,9 @@
 
 npm install 
 
-npm start
+npm run build
+
+node dist
 
 ## 1. get all county list ---
 

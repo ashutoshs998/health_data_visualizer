@@ -34,12 +34,18 @@ module.exports = {
     },
 
     add_fav: function add_fav(req, res, next) {
-        _db2.default.fav_county.create({
-            county: req.body.county
-        }).then(function (data) {
-            res.json({ error: 0, message: "county added to favourites", result: data });
-        }).catch(function (err) {
-            return next(err);
+        _db2.default.fav_county.find({ county: req.body.county }).then(function (exist) {
+            if (exist) {
+                res.json({ error: 1, message: "already exist in favourite list" });
+            } else {
+                _db2.default.fav_county.create({
+                    county: req.body.county
+                }).then(function (data) {
+                    res.json({ error: 0, message: "county added to favourites", result: data });
+                }).catch(function (err) {
+                    return next(err);
+                });
+            }
         });
     },
 
