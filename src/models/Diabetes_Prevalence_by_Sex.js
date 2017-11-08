@@ -1,5 +1,5 @@
 export default function(sequelize, DataTypes) {
-    let Diabetes_Prevalence_by_Sex = sequelize.define('Diabetes_Prevalence_by_Sex', {
+    let Diabetes_Prevalence_by_Sex = sequelize.define('Diabetes_Prevalence_by_Sex_health', {
         state: { type: DataTypes.STRING },
         FIPS_code: { type: DataTypes.STRING },
         county: { type: DataTypes.STRING },
