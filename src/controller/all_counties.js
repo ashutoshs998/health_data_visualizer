@@ -25,11 +25,17 @@ module.exports = {
     },
 
     add_fav: (req, res, next) => {
-        db.fav_county.create({
-            county: req.body.county
-        }).then((data) => {
-            res.json({ error: 0, message: "county added to favourites", result: data })
-        }).catch(err => next(err));
+        db.fav_county.find({ county: req.body.county }).then((exist) => {
+            if (exist) {
+                res.json({ error: 1, message: "already exist in favourite list" })
+            } else {
+                db.fav_county.create({
+                    county: req.body.county
+                }).then((data) => {
+                    res.json({ error: 0, message: "county added to favourites", result: data })
+                }).catch(err => next(err));
+            }
+        })
     },
 
     get_fav: (req, res, next) => {
