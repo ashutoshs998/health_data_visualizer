@@ -1,0 +1,141 @@
+{
+	"variables": [],
+	"info": {
+		"name": "health_data_visualizer",
+		"_postman_id": "ee053ebd-dfea-53fa-9a9d-736b48ad833c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_all_counties",
+			"request": {
+				"url": "https://mysterious-refuge-38097.herokuapp.com/all_counties",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_data_of_one_county",
+			"request": {
+				"url": "https://mysterious-refuge-38097.herokuapp.com/get_data_by_county",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "county",
+							"value": "Autauga County",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "search_county",
+			"request": {
+				"url": "https://mysterious-refuge-38097.herokuapp.com/search_county",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "county",
+							"value": "Autauga County",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_county_data_all_years",
+			"request": {
+				"url": "https://mysterious-refuge-38097.herokuapp.com/get_chart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "county",
+							"value": "Autauga County",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add_to_fav",
+			"request": {
+				"url": "https://mysterious-refuge-38097.herokuapp.com/add_favourite",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "county",
+							"value": "Autauga County",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_fav_counties",
+			"request": {
+				"url": "https://mysterious-refuge-38097.herokuapp.com/get_favourite",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
