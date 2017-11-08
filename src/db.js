@@ -10,7 +10,7 @@ import Obesity_Prevalence_by_Sex from "./models/Obesity_Prevalence_by_Sex.js";
 
 const db = {};
 
-const sequelize = new Sequelize('health_visualizer', 'root', 'java@123', { dialect: 'mysql' });
+const sequelize = new Sequelize('node_sample', 'hr_recruit_dev', 'recruitdev@123', { dialect: 'mysql', host: "5.9.144.226" });
 Object.keys(models).forEach((modelName) => {
     const model = models[modelName](sequelize, Sequelize.DataTypes);
     db[modelName] = model;

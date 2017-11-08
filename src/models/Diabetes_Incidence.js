@@ -1,5 +1,5 @@
 export default function(sequelize, DataTypes) {
-    let Diabetes_Incidence = sequelize.define('Diabetes_Incidence', {
+    let Diabetes_Incidence = sequelize.define('Diabetes_Incidence_health', {
         state: { type: DataTypes.STRING },
         FIPS_code: { type: DataTypes.STRING },
         county: { type: DataTypes.STRING },
